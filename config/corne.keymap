@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEFAULT 0
 #define LOWER 1
@@ -69,14 +70,14 @@
                 };
                 lower_layer {
 // -----------------------------------------------------------------------------------------
-// |  ESC |     | HOME|  UP | END |PG_UP|      |  F1 | F2  | F3  | F4  | F5  | F6   |
-// |  TAB |     | LFT | DWN | RGT |PG_DN|      |  F7 | F8  | F9  | F10 | F11 | F12  |
-// | SHFT |     | C+LF| INS | C+RT| DEL |      | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
+// |      |     | HOME|  UP | END |PG_UP|      |  F1 | F2  | F3  | F4  | F5  | F6   |
+// |      |     | LFT | DWN | RGT |PG_DN|      |  F7 | F8  | F9  | F10 | F11 | F12  |
+// |EP_TOG|     | C+LF| INS | C+RT| DEL |      | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
 //                    |     |     | SPC |      | ENT |     | ALT |
                         bindings = <
-   &none      &none        &kp HOME     &kp UP       &kp END       &kp PG_UP         &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6
-   &none      &none        &kp LEFT     &kp DOWN     &kp RIGHT     &kp PG_DN         &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
-   &none      &none        &kp LC(LEFT) &kp INS      &kp LC(RIGHT) &kp DELETE        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   
+   &none              &none        &kp HOME     &kp UP       &kp END       &kp PG_UP         &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6
+   &none              &none        &kp LEFT     &kp DOWN     &kp RIGHT     &kp PG_DN         &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
+   &ext_power EP_TOG  &none        &kp LC(LEFT) &kp INS      &kp LC(RIGHT) &kp DELETE        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   
                                         &none        &none         &none             &none        &none        &none
                         >;
                 };
