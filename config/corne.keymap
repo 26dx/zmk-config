@@ -54,11 +54,11 @@
                         quick-tap-ms = <0>;
                         flavor = "hold-preferred";
                         bindings = <&kp>, <&kp>;
+                };
         };
         &lt {
                 tapping-term-ms = <200>;
-        };
-    };
+            };
 
         keymap {
               
