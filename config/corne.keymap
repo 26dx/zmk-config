@@ -8,10 +8,10 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
-#define DEFAULT 0
-#define LOWER 1
-#define UPPER 2
-#define NUMS 3
+// #define DEFAULT 0
+// #define LOWER 1
+// #define UPPER 2
+// #define NUMS 3
 
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    00     01     02     03    04      05        06     07     08     09     10     11
@@ -58,10 +58,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | SHTT |
 //                    | CTRL| LWR | SPC |      | ENT | RSE  | ALT |
                         bindings = <
-   &kp ESC   &kp Q        &kp W        &kp E       &kp R        &kp T   &kp Y        &kp U       &kp I         &kp O        &kp P          &kp BSPC
-   &kp TAB   &hm LGUI  A  &hm LSHIFT S &hm LALT D  &hm LCTRL F  &kp G   &kp H        &hm RCTL J  &hm RALT K    &hm RSHIFT L &hm RGUI SEMI  &kp SQT
-   &kp LSHFT &kp Z        &kp X        &kp C       &kp V        &kp B   &kp N        &kp M       &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
-                  &kp LEFT_CONTROL &mo 1 &kp SPACE   &kp RET &mo 2 &kp LEFT_ALT
+   &kp ESC   &kp Q        &kp W        &kp E            &kp R           &kp T            &kp Y        &kp U       &kp I         &kp O        &kp P          &kp BSPC
+   &kp TAB   &hm LGUI  A  &hm LSHIFT S &hm LALT D       &hm LCTRL F     &kp G            &kp H        &hm RCTL J  &hm RALT K    &hm RSHIFT L &hm RGUI SEMI  &kp SQT
+   &kp LSHFT &kp Z        &kp X        &kp C            &kp V           &kp B            &kp N        &kp M       &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
+                                       &kp LEFT_CONTROL &mo 1           &kp SPACE        &kp RET      &mo 2       &kp LEFT_ALT
                         >;
                 };
                 lower_layer {
