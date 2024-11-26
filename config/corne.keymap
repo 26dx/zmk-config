@@ -74,8 +74,8 @@
 // | SHFT |     | C+LF| INS | C+RT| DEL |      | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
 //                    |     |     | SPC |      | ENT |     | ALT |
                         bindings = <
-   &none      &none        &kp HOME     &kp UP       &kp END       &kp PG_UP         &none        &none        &none        &none        &none        &none
-   &none      &none        &kp LEFT     &kp DOWN     &kp RIGHT     &kp PG_DN         &none        &none        &none        &none        &none        &none
+   &none      &none        &kp HOME     &kp UP       &kp END       &kp PG_UP         &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6
+   &none      &none        &kp LEFT     &kp DOWN     &kp RIGHT     &kp PG_DN         &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
    &none      &none        &kp LC(LEFT) &kp INS      &kp LC(RIGHT) &kp DELETE        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   
                                         &none        &none         &none             &none        &none        &none
                         >;
