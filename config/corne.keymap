@@ -24,92 +24,93 @@
 //                         36     37     38        39     40
 //                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
 
+
+// combos
 / { 
-        combos {
-                compatible = "zmk,combos";
-                combo_unlock_zmd_studio {
-                        timeout-ms = <50>;
-                        key-positions = <0 11>;
-                        bindings = <&studio_unlock>;
-                };
-        }; 
+    combos {
+        compatible = "zmk,combos";
+        combo_unlock_zmd_studio {
+            timeout-ms = <50>;
+            key-positions = <0 11>;
+            bindings = <&studio_unlock>;
+        };
+    }; 
 };
 
 &lt {
-        tapping-term-ms = <200>;
+    tapping-term-ms = <200>;
 };
 
 / {
-        behaviors {
-                hm: homerow_mods {
-                        compatible = "zmk,behavior-hold-tap";
-                        #binding-cells = <2>;
-                        tapping-term-ms = <200>;    // <---[[moderate duration]]
-                        quick-tap-ms = <0>;
-                        flavor = "balanced";
-                        bindings = <&kp>, <&kp>;
-                };
+    behaviors {
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
         };
+    };
 
-        keymap {
-              
-                compatible = "zmk,keymap";
-
-                default_layer {
+    keymap {      
+        compatible = "zmk,keymap";
+        
+        default_layer {
 // -----------------------------------------------------------------------------------------
 // |  ESC |  Q  |  W  |  E  |  R  |  T  |      |  Y  |  U   |  I  |  O  |  P  | BSPC |
 // |  TAB |  A  |  S  |  D  |  F  |  G  |      |  H  |  J   |  K  |  L  |  ;  |  '   |
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |      |  N  |  M   |  ,  |  .  |  /  | SHTT |
 //                    | CTRL| LWR | SPC |      | ENT | RSE  | ALT |
-                        bindings = <
+            bindings = <
    &kp ESC   &kp Q        &kp W        &kp E            &kp R           &kp T            &kp Y        &kp U       &kp I         &kp O        &kp P          &kp BSPC
    &kp TAB   &hm LGUI  A  &hm LSHIFT S &hm LALT D       &hm LCTRL F     &kp G            &kp H        &hm RCTL J  &hm RALT K    &hm RSHIFT L &hm RGUI SEMI  &kp SQT
    &kp LSHFT &kp Z        &kp X        &kp C            &kp V           &kp B            &kp N        &kp M       &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
                                        &kp LCTRL        &mo 1           &lt 3 SPACE      &lt 3 RET    &mo 2       &kp LALT
-                        >;
-                };
-                lower_layer {
+            >;
+        };
+        lower_layer {
 // -----------------------------------------------------------------------------------------
 // |      |     | HOME|  UP | END |PG_UP|      |  F1 | F2  | F3  | F4  | F5  | F6   |
 // |      |     | LFT | DWN | RGT |PG_DN|      |  F7 | F8  | F9  | F10 | F11 | F12  |
 // |EP_TOG|     | C+LF| INS | C+RT| DEL |      | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
 //                    |     |     | SPC |      | ENT |     | ALT |
-                        bindings = <
+            bindings = <
    &none              &none        &kp HOME     &kp UP       &kp END       &kp PG_UP         &kp F1       &kp F2       &kp F3       &kp F4       &kp F5       &kp F6
    &ext_power EP_ON   &none        &kp LEFT     &kp DOWN     &kp RIGHT     &kp PG_DN         &kp F7       &kp F8       &kp F9       &kp F10      &kp F11      &kp F12
    &ext_power EP_OFF  &none        &kp LC(LEFT) &kp INS      &kp LC(RIGHT) &kp DELETE        &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR   
                                         &none        &none         &none             &none        &none        &none
-                        >;
-                };
+            >;
+        };
 
-                raise_layer {
+        raise_layer {
 // -----------------------------------------------------------------------------------------
 // |    `   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
 // |        |  ~  |  (  |  -  |  )  |  +  |   |     |  [  |  _  |  ]  |  \  |      |
 // |        |     |  <  |  =  |  >  |     |   |     |  {  |     |  }  | "|" |      |
 //                      |     |     |     |   |     |     |     |
-                        bindings = <
+            bindings = <
    &kp GRAVE   &kp EXCL   &kp AT    &kp HASH    &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &none
    &none       &kp TILDE  &kp LPAR  &kp MINUS   &kp RPAR  &kp PLUS       &none     &kp LBKT  &kp UNDER  &kp RBKT  &kp BSLH  &none
    &none       &none      &kp LT    &kp EQUAL   &kp GT    &none          &none     &kp LBRC  &none      &kp RBRC  &kp PIPE  &none
                                     &none       &none     &none          &none     &none     &none
-                        >;
-                };
+            >;
+        };
 
-                nums_layer {
+        nums_layer {
 // -----------------------------------------------------------------------------------------
 // |        |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  |      |
 // |        |     |     |     |     |     |   |     |     |     |     |     |      |
 // |        |     |     |     |     |     |   |     |     |     |     |     |      |
 //                      |     |     |     |   |     |     |     |
-                        bindings = <
+            bindings = <
    &none       &kp N1     &kp N2    &kp N3      &kp N4    &kp N5         &kp N6    &kp N7    &kp N8     &kp N9    &kp N0    &none
    &none       &none      &none     &none       &none     &none          &none     &none     &none      &none     &none     &none
    &none       &none      &none     &none       &none     &none          &none     &none     &none      &none     &none     &none
                                     &none       &none     &none          &none     &none     &none
-                        >;
-                };
+            >;
         };
+    };
 };
 
 
