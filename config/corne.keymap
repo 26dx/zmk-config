@@ -54,6 +54,8 @@
         };
     };
 
+// todo: configure sticky layers to nums. if layer is enabled let it be until another key besides numbers are pressed
+
     keymap {      
         compatible = "zmk,keymap";
         
