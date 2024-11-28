@@ -13,7 +13,7 @@
 
 #define DEF 0
 #define LOW 1
-#define UP 2
+#define UPR 2
 #define NUM 3
 #define GAME 4
 
@@ -77,7 +77,7 @@
    &kp ESC   &kp Q        &kp W        &kp E            &kp R           &kp T            &kp Y        &kp U       &kp I         &kp O        &kp P          &kp BSPC
    &kp TAB   &hm LGUI  A  &hm LSHIFT S &hm LALT D       &hm LCTRL F     &kp G            &kp H        &hm RCTL J  &hm RALT K    &hm RSHIFT L &hm RGUI SEMI  &kp SQT
    &kp LSHFT &kp Z        &kp X        &kp C            &kp V           &kp B            &kp N        &kp M       &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
-                                       &kp LGUI         &mo LOW         &lt NUM SPACE      &lt NUM RET    &mo UP       &kp LALT
+                                       &kp LGUI         &mo LOW         &lt NUM SPACE      &lt NUM RET    &mo UPR   &kp LALT
             >;
         };
         lower_layer {
@@ -118,7 +118,7 @@
    &none       &kp N1     &kp N2    &kp N3      &kp N4    &kp N5        &kp N6    &kp N7    &kp N8     &kp N9       &kp N0    &kp BSPC
    &none       &none      &none     &none       &none     &none         &none     &none     &none      &none        &none     &none
    &none       &none      &none     &none       &none     &none         &none     &none     &none      &kp COMMA    &kp DOT   &none
-                                    &none       &mo LOW     &kp SPACE     &kp RET     &mo UP     &none
+                                    &none       &mo LOW     &kp SPACE     &kp RET     &mo UPR     &none
             >;
         };
         game_layer {
@@ -131,7 +131,7 @@
    &kp ESC   &kp Q      &kp W       &kp E       &kp R       &kp T           &kp Y        &kp U      &kp I       &kp O       &kp P          &kp BSPC
    &kp TAB   &kp A      &kp S       &kp D       &kp F       &kp G           &kp H        &kp J      &kp K       &kp L       &kp SEMI  &kp SQT
    &kp LSHFT &kp Z      &kp X       &kp C       &kp V       &kp B           &kp N        &kp M      &kp COMMA   &kp DOT     &kp FSLH       &kp RSHFT
-                                    &kp LCTRL   &mo LOW       &lt 3 SPACE     &lt 3 RET    &mo UP      &kp LALT
+                                    &kp LCTRL   &mo LOW       &lt 3 SPACE     &lt 3 RET    &mo UPR      &kp LALT
             >;
         };
 
