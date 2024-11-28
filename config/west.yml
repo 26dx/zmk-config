@@ -2,8 +2,8 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-#    - name: 26dx
-#      url-base: https://github.com/26dx
+    - name: urob
+      url-base: https://github.com/urob
     # Additional modules containing boards/shields/custom code can be listed here as well
     # See https://docs.zephyrproject.org/3.2.0/develop/west/manifest.html#projects
   projects:
@@ -11,8 +11,8 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-#    - name: zmk-auto-layer
-#      remote: 26dx
-#      revision: main
+    - name: zmk-auto-layer
+      remote: urob
+      revision: main
   self:
     path: config
