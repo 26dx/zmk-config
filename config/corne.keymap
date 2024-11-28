@@ -30,16 +30,6 @@
 
 // tap: num-word | double-tap: sticky num-layer | hold: num-layer (took from urob configuration, see fork or original repo)
 #define SMART_NUM &smart_num NUM 3
-ZMK_HOLD_TAP(smart_num,
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <175>;
-    bindings = <&mo>, <&num_dance>;
-)
-ZMK_TAP_DANCE(num_dance,
-    tapping-term-ms = <200>;
-    bindings = <&num_word NUM>, <&sl NUM>;  // reverse this for sticky-num on single tap
-)
 
 // combos
 / { 
