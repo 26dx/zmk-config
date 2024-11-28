@@ -28,21 +28,6 @@
 //                      ╰──────┴──────┴──────╯  ╰──────┴──────╯
 
 
-// tap: num-word | double-tap: sticky num-layer | hold: num-layer (took from urob configuration, see fork or original repo)
-#define SMART_NUM &smart_num NUM 3
-
-// combos
-/ { 
-    combos {
-        compatible = "zmk,combos";
-        combo_unlock_zmd_studio {
-            timeout-ms = <50>;
-            key-positions = <0 11>;
-            bindings = <&studio_unlock>;
-        };
-    }; 
-};
-
 &lt {
     tapping-term-ms = <200>;
 };
@@ -75,7 +60,7 @@
    &kp ESC   &kp Q        &kp W        &kp E            &kp R           &kp T            &kp Y        &kp U       &kp I         &kp O        &kp P          &kp BSPC
    &kp TAB   &hm LGUI  A  &hm LSHIFT S &hm LALT D       &hm LCTRL F     &kp G            &kp H        &hm RCTL J  &hm RALT K    &hm RSHIFT L &hm RGUI SEMI  &kp SQT
    &kp LSHFT &kp Z        &kp X        &kp C            &kp V           &kp B            &kp N        &kp M       &kp COMMA     &kp DOT      &kp FSLH       &kp RSHFT
-                                       &kp LCTRL        &mo 1           &lt 3 SPACE      &lt &smart_num RET    &mo 2       &kp LALT
+                                       &kp LCTRL        &mo 1           &lt 3 SPACE      &lt &num_word 3 RET    &mo 2       &kp LALT
             >;
         };
         lower_layer {
