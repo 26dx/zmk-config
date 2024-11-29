@@ -38,11 +38,13 @@
             bindings = <&tog GAME>;
             layers = <0 4>;
         };
+        // enable numbers layers
         enable_num_layer {
             timeout-ms = <50>;
             key-positions = <38 39>;
             bindings = <&num_word NUM>;
         };
+        // reset bluetooth settings
         reset_bluetooth {
             timeout-ms = <50>;
             key-positions = <30 34>;
@@ -67,6 +69,9 @@
             bindings = <&kp>, <&kp>;
         };
     };
+
+
+// todo: create a macro that switch language on alt + shift press
 
 // todo: configure sticky layers to nums. if layer is enabled let it be until another key besides numbers are pressed
 // todo: make a game layer
