@@ -57,6 +57,7 @@
             timeout-ms = <50>;
             key-positions = <38 39>;
             bindings = <&num_word NUM>;
+            layers = <0>;
         };
         // reset bluetooth settings
         reset_bluetooth {
