@@ -92,11 +92,7 @@
         };
     };
 
-
-// todo: create a macro that switch language on alt + shift press
-
 // todo: configure sticky layers to nums. if layer is enabled let it be until another key besides numbers are pressed
-// todo: make a game layer
 
     keymap {      
         compatible = "zmk,keymap";
