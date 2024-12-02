@@ -30,7 +30,7 @@
 
 / {
     macros {
-        alt_shift: alt_shift {
+        macros_alt_shift: alt_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -39,7 +39,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        control_v: control_v {
+        macros_control_v: control_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -55,38 +55,38 @@
     combos {
         compatible = "zmk,combos";
         // togle game layer by pressing ESC and BCKSPC
-        togle_game_layer {
+        combo_togle_game_layer {
             timeout-ms = <50>;
             key-positions = <0 11>;
             bindings = <&tog GAME>;
             layers = <0 4>;
         };
         // enable numbers layers
-        enable_num_layer {
+        combo_enable_num_layer {
             timeout-ms = <50>;
             key-positions = <38 39>;
             bindings = <&num_word NUM>;
             layers = <0>;
         };
         // reset bluetooth settings
-        reset_bluetooth {
+        combo_reset_bluetooth {
             timeout-ms = <50>;
             key-positions = <30 34>;
             bindings = <&bt BT_CLR>;
             layers = <1>;
         };
         // reset bluetooth settings
-        switch_language {
+        combo_switch_language {
             timeout-ms = <50>;
             key-positions = <36 24>;
-            bindings = <&alt_shift>;
+            bindings = <&macros_alt_shift>;
             layers = <0>;
         };
         // paste combo
         combo_paste {
             timeout-ms = <50>;
             key-positions = <16 28>;
-            binding = <&control_v>;
+            bindings = <&macros_control_v>;
             layers = <0>;
         };
     };
