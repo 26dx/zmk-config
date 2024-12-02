@@ -30,13 +30,22 @@
 
 / {
     macros {
-        alt_shift: alt_shift {
+        macros_alt_shift: alt_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
                 = <&macro_press &kp LALT>
                 , <&macro_tap &kp LSHFT>
                 , <&macro_release &kp LALT>
+                ;
+        };
+        macros_control_v: control_v {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp V>
+                , <&macro_release &kp LCTRL>
                 ;
         };
     };
@@ -46,31 +55,38 @@
     combos {
         compatible = "zmk,combos";
         // togle game layer by pressing ESC and BCKSPC
-        togle_game_layer {
+        combo_togle_game_layer {
             timeout-ms = <50>;
             key-positions = <0 11>;
             bindings = <&tog GAME>;
             layers = <0 4>;
         };
         // enable numbers layers
-        enable_num_layer {
+        combo_enable_num_layer {
             timeout-ms = <50>;
             key-positions = <38 39>;
             bindings = <&num_word NUM>;
             layers = <0>;
         };
         // reset bluetooth settings
-        reset_bluetooth {
+        combo_reset_bluetooth {
             timeout-ms = <50>;
             key-positions = <30 34>;
             bindings = <&bt BT_CLR>;
             layers = <1>;
         };
         // reset bluetooth settings
-        switch_language {
+        combo_switch_language {
             timeout-ms = <50>;
             key-positions = <36 24>;
-            bindings = <&alt_shift>;
+            bindings = <&macros_alt_shift>;
+            layers = <0>;
+        };
+        // paste combo
+        combo_paste {
+            timeout-ms = <50>;
+            key-positions = <16 28>;
+            bindings = <&macros_control_v>;
             layers = <0>;
         };
     };
@@ -130,14 +146,14 @@
             display-name = "UP";
 // -----------------------------------------------------------------------------------------
 // |    `   |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  |      |
-// |        |  ~  |  (  |  -  |  )  |     |   |     |  [  |  _  |  ]  | "|" |      |
+// |        |  ~  |  (  |  -  |  )  |  \  |   | "|" |  [  |  _  |  ]  | "|" |      |
 // |        |     |  <  |  =  |  >  |     |   |     |  {  |  +  |  }  |  \  |      |
 //                      |     |     |     |   |     |     |     |
             bindings = <
-   &kp GRAVE   &kp EXCL   &kp AT    &kp HASH    &kp DLLR  &kp PRCNT      &kp CARET &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &none
-   &none       &kp TILDE  &kp LPAR  &kp MINUS   &kp RPAR  &none          &none     &kp LBKT  &kp UNDER  &kp RBKT  &kp PIPE  &none
-   &none       &none      &kp LT    &kp EQUAL   &kp GT    &none          &none     &kp LBRC  &kp PLUS   &kp RBRC  &kp BSLH  &none
-                                    &none       &none     &none          &none     &none     &none
+    &kp GRAVE   &kp EXCL    &kp AT      &kp HASH    &kp DLLR  &kp PRCNT         &kp CARET   &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &none
+    &none       &kp TILDE   &kp LPAR    &kp MINUS   &kp RPAR  &kp BSLH          &kp PIPE    &kp LBKT  &kp UNDER  &kp RBKT  &kp PIPE  &none
+    &none       &none       &kp LT      &kp EQUAL   &kp GT    &none             &none       &kp LBRC  &kp PLUS   &kp RBRC  &kp BSLH  &none
+                                        &none       &none     &none             &none       &none     &none
             >;
         };
 
@@ -149,10 +165,10 @@
 // |        |     |     |     |     |     |   |     |     |     |     |     |      |
 //                      |     |     |     |   |     |     |     |
             bindings = <
-   &trans   &kp N1     &kp N2   &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8    &kp N9  &kp N0  &trans
-   &none    &none      &trans   &none       &trans      &none       &none       &none       &none     &none   &none   &none
-   &none    &none      &none    &none       &none       &none       &none       &none       &trans    &trans  &none   &none
-                                &none       &trans      &trans      &trans      &trans      &none
+   &trans   &kp N1      &kp N2      &kp N3      &kp N4      &kp N5      &kp N6      &kp N7      &kp N8    &kp N9  &kp N0    &trans
+   &trans   &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans    &trans  &trans    &trans
+   &trans   &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans    &trans  &trans    &trans
+                                    &none       &trans      &trans      &trans      &trans      &none
             >;
         };
         game_layer {
