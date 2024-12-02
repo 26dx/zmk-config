@@ -39,7 +39,7 @@
                 , <&macro_release &kp LALT>
                 ;
         };
-        crtl_v: crtl_v {
+        control_v: control_v {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -83,10 +83,10 @@
             layers = <0>;
         };
         // paste combo
-        paste {
+        combo_paste {
             timeout-ms = <50>;
             key-positions = <16 28>;
-            binding = <&crtl_v>;
+            binding = <&control_v>;
             layers = <0>;
         };
     };
