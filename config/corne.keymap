@@ -75,9 +75,9 @@
             bindings = <&bt BT_CLR>;
             layers = <1>;
         };
-        // reset bluetooth settings
+        // switch language
         combo_switch_language {
-            timeout-ms = <50>;
+            timeout-ms = <200>;
             key-positions = <36 24>;
             bindings = <&macros_alt_shift>;
             layers = <0>;
