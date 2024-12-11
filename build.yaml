@@ -19,8 +19,6 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: corne_choc_left # nice_oled
-    shield: corne_glp_left
+    shield: corne_left # nice_oled
   - board: nice_nano_v2
-    shield: corne_choc_right # nice_oled # to enable custom display remove comments
-    shield: corne_glp_right
+    shield: corne_right # nice_oled # to enable custom display remove comments
