@@ -34,9 +34,9 @@ include:
     board: nice_nano_v2
     shield: corne_left # nice_oled
     cmake-args: -DEXTA_CONF_FILE=../../config/corne_choc.conf
-    artifact-name: zmk-corne-glp-left
+    artifact-name: zmk-corne-choc-left
   - keyboard: Corne CHOC
     board: nice_nano_v2
     shield: corne_right # nice_oled
     cmake-args: -DEXTA_CONF_FILE=../../config/corne_choc.conf
-    artifact-name: zmk-corne-glp-right
+    artifact-name: zmk-corne-choc-right
