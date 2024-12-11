@@ -18,7 +18,25 @@
 #
 ---
 include:
-  - board: nice_nano_v2
+  # corne GLP
+  - keyboard: Corne GLP
+    board: nice_nano_v2
     shield: corne_left # nice_oled
-  - board: nice_nano_v2
-    shield: corne_right # nice_oled # to enable custom display remove comments
+    cmake-args: -DEXTA_CONF_FILE=../../config/corne_glp.conf
+    artifact-name: zmk-corne-glp-left
+  - keyboard: Corne GLP
+    board: nice_nano_v2
+    shield: corne_right # nice_oled
+    cmake-args: -DEXTA_CONF_FILE=../../config/corne_glp.conf
+    artifact-name: zmk-corne-glp-right
+  # corne CHOC
+  - keyboard: Corne CHOC
+    board: nice_nano_v2
+    shield: corne_left # nice_oled
+    cmake-args: -DEXTA_CONF_FILE=../../config/corne_choc.conf
+    artifact-name: zmk-corne-glp-left
+  - keyboard: Corne CHOC
+    board: nice_nano_v2
+    shield: corne_right # nice_oled
+    cmake-args: -DEXTA_CONF_FILE=../../config/corne_choc.conf
+    artifact-name: zmk-corne-glp-right
