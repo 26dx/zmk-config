@@ -12,10 +12,11 @@
 #include "zmk-helpers/helper.h"
 
 #define DEF 0
-#define LOW 1
-#define UPR 2
-#define NUM 3
-#define GAME 4
+#define GAME 1
+#define LOW 2
+#define UPR 3
+#define NUM 4
+
 
 // COMBOS
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
