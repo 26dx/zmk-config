@@ -60,7 +60,7 @@
             timeout-ms = <50>;
             key-positions = <0 11>;
             bindings = <&tog GAME>;
-            layers = <0 4>;
+            layers = <DEF GAME>;
         };
         // enable numbers layers
         combo_enable_num_layer {
@@ -143,8 +143,8 @@
                                     &kp LALT    &kp LCTRL   &kp SPACE           &lt NUM RET &mo LOW     &kp LALT
             >;
         };
-        
-        lower_layer {
+
+        lower_lay
             display-name = "LOW";
 // -----------------------------------------------------------------------------------------
 // |      | PSCR| HOME|  UP | END |PG_UP|      | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
