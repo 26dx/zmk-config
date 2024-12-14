@@ -77,12 +77,12 @@
             layers = <1>;
         };
         // switch language
-        //combo_switch_language {
-        //    timeout-ms = <200>;
-        //    key-positions = <36 24>;
-        //    bindings = <&macros_alt_shift>;
-        //    layers = <0>;
-        //};
+        combo_switch_language {
+            timeout-ms = <200>;
+            key-positions = <36 24>;
+            bindings = <&macros_alt_shift>;
+            layers = <0>;
+        };
         // paste combo
         combo_paste {
             timeout-ms = <50>;
