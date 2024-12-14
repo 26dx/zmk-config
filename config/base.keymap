@@ -77,12 +77,12 @@
             layers = <1>;
         };
         // switch language
-        combo_switch_language {
-            timeout-ms = <200>;
-            key-positions = <36 24>;
-            bindings = <&macros_alt_shift>;
-            layers = <0>;
-        };
+        //combo_switch_language {
+        //    timeout-ms = <200>;
+        //    key-positions = <36 24>;
+        //    bindings = <&macros_alt_shift>;
+        //    layers = <0>;
+        //};
         // paste combo
         combo_paste {
             timeout-ms = <50>;
@@ -106,6 +106,12 @@
             quick-tap-ms = <0>;
             flavor = "balanced";
             bindings = <&kp>, <&kp>;
+        };
+        morph_alt_shift: morph_alt_shift {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp LSHFT>, <&kp alt_shift>;
+            mods = <(MOD_LGUI)>;
         };
     };
 
