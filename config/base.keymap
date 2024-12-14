@@ -110,7 +110,7 @@
         morph_alt_shift: morph_alt_shift {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp LSHFT>, <&kp alt_shift>;
+            bindings = <&kp LSHFT>, <&kp macros_alt_shift>;
             mods = <(MOD_LGUI)>;
         };
     };
