@@ -144,7 +144,7 @@
             >;
         };
 
-        lower_lay
+        lower_layer {
             display-name = "LOW";
 // -----------------------------------------------------------------------------------------
 // |      | PSCR| HOME|  UP | END |PG_UP|      | BT0 | BT1 | BT2 | BT3 | BT4 | BTCLR|
