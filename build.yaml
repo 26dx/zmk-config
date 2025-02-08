@@ -19,9 +19,30 @@
 ---
 include:
   # corne GLP
-  - board: nice_nano_v2
+  - keyboard: corne_glp
+    board: nice_nano_v2
     shield: corne_left # nice_oled
-  - board: nice_nano_v2
+    cmake-arg: -DEXTRA_CONF_FILE=../../config/corne_gpl.conf
+  - keyboard: corne_glp
+    board: nice_nano_v2
     shield: corne_right # nice_oled
+    cmake-arg: -DEXTRA_CONF_FILE=../../config/corne_gpl.conf
+  - keyboard: corne_mx
+    board: nice_nano_v2
+    shield: corne_left # nice_oled
+    cmake-arg: -DEXTRA_CONF_FILE=../../config/corne_mx.conf
+  - keyboard: corne_mx
+    board: nice_nano_v2
+    shield: corne_right # nice_oled
+    cmake-arg: -DEXTRA_CONF_FILE=../../config/corne_mx.conf
+  - keyboard: corne_choc
+    board: nice_nano_v2
+    shield: corne_left # nice_oled
+    cmake-arg: -DEXTRA_CONF_FILE=../../config/corne_choc.conf
+  - keyboard: corne_choc
+    board: nice_nano_v2
+    shield: corne_right # nice_oled
+    cmake-arg: -DEXTRA_CONF_FILE=../../config/corne_choc.conf
+
   - board: nice_nano_v2
     shield: settings_reset
