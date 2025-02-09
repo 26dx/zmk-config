@@ -22,12 +22,12 @@ include:
   - keyboard: corne_glp
     board: nice_nano_v2
     shield: corne_left # nice_oled
-    cmake-args: -DEXTRA_CONF_FILE=../../config/corne_gpl.conf
+    cmake-args: -DEXTRA_CONF_FILE=../../config/corne_glp.conf
     artifact-name: corne_glp_left
   - keyboard: corne_glp
     board: nice_nano_v2
     shield: corne_right # nice_oled
-    cmake-args: -DEXTRA_CONF_FILE=../../config/corne_gpl.conf
+    cmake-args: -DEXTRA_CONF_FILE=../../config/corne_glp.conf
     artifact-name: corne_glp_right
   - keyboard: corne_mx
     board: nice_nano_v2
